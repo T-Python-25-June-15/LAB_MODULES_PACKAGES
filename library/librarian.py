@@ -26,11 +26,11 @@ def check_out_book(library, isbn:str):
         print(f"book {library[isbn]["title"]} checked out successfully")
 
 def return_book(library, isbn:str):
-    if isbn == library["isbn"]:
-        library["available"] == True
-        print("The availability of the book is set to True")
-    else: 
-        print("The ISBN dose not exist")
+    if isbn not in library:
+        print(f"Book with isbn: {isbn} not found")
+    else:
+        library[isbn]['available'] = True
+        print(f"The book with isbn: {isbn} is available")
 
 def display_books(library):
     for isbn, book in library.items():

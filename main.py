@@ -11,6 +11,8 @@ librarian.remove_book(my_library, '221')
 print("="*50)
 librarian.check_out_book(my_library, '331')
 print("="*50)
+librarian.return_book(my_library, '111')
+print("="*50)
 librarian.display_books(my_library)
 
 
