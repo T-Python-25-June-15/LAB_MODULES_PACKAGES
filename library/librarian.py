@@ -41,10 +41,10 @@ def return_book(library:dict,isbn:str):
          print("The book is not found.")
 
 def display_book(library:dict):
-    for isbn,library in library.items():
-        if library["available"]== True:
+    for isbn,library2 in library.items():
+        if library2["available"]== True:
             book_state= "available"
         else:
              book_state= "Checked Out"
-    print(f"{library["title"]} by {library["author"]} (ISBN: {library[isbn]} ) - {book_state} ")
+        print(f"{library2["title"]} by {library2["author"]} (ISBN: {isbn} ) - {book_state} ")
 
